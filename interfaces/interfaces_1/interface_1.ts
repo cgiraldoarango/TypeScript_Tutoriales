@@ -1,5 +1,5 @@
 interface ISerie{
-    elements:number[];
+    elementos:number[];
     contar():number;
 }
 interface IDatos{
@@ -18,8 +18,27 @@ interface IPersona{
 function saludar(cliente:IPersona):string{
     return `Hola ${cliente.nombre}`
 }
-let persona1:IPersona={
+let empleado:IPersona={
     nombre:"CARLOS",
     apellido:"GIRALDO",
 }
-console.log(saludar(persona1))
+
+console.log(saludar(empleado))
+
+class Numeros implements ISerie{
+    elementos: number[];
+    contar(): number {
+        return this.elementos[0];
+    }   
+}
+
+class Global{
+    static paraCada(coleccion:ISerie){
+        for(let x=0;x<coleccion.elementos.length;x++){
+            console.log(coleccion.elementos[x])
+        }
+    }
+}
+let numeros = new Numeros();
+numeros.elementos=[1,2,3]
+Global.paraCada(numeros)
