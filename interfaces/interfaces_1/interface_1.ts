@@ -1,3 +1,4 @@
+//Definir algunas interfaces
 interface ISerie{
     elementos:number[];
     contar():number;
@@ -14,17 +15,18 @@ interface IPersona{
     apellido:string;
     edad?:Number
 }
-//uso en el parámetro de una función
+//uso de interface en el parámetro de una función
 function saludar(cliente:IPersona):string{
     return `Hola ${cliente.nombre}`
 }
+//declarar una variable del tipo de una interface
 let empleado:IPersona={
     nombre:"CARLOS",
     apellido:"GIRALDO",
 }
-
+//Mostrar por consola
 console.log(saludar(empleado))
-
+//Declarar clase Numeros
 class Numeros implements ISerie, IPedido{
     enviarMensaje(): void {
         
@@ -34,7 +36,7 @@ class Numeros implements ISerie, IPedido{
         return this.elementos[0];
     }   
 }
-
+//Declaración clase Global
 class Global{
     static paraCada(coleccion:ISerie){
         for(let x=0;x<coleccion.elementos.length;x++){
@@ -48,6 +50,7 @@ class Global{
         console.log(`Nombre del cliente ${dato.nombre} edad: ${dato.edad}`)
     }
 }
+//Declarar variables
 let numeros = new Numeros();
 let pedido:IPedido={
     enviarMensaje() {
