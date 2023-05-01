@@ -1,12 +1,15 @@
-//uso en el parámetro de una función
+//uso de interface en el parámetro de una función
 function saludar(cliente) {
     return "Hola ".concat(cliente.nombre);
 }
+//declarar una variable del tipo de una interface
 var empleado = {
     nombre: "CARLOS",
     apellido: "GIRALDO"
 };
+//Mostrar por consola
 console.log(saludar(empleado));
+//Declarar clase Numeros
 var Numeros = /** @class */ (function () {
     function Numeros() {
     }
@@ -17,6 +20,7 @@ var Numeros = /** @class */ (function () {
     };
     return Numeros;
 }());
+//Declaración clase Global
 var Global = /** @class */ (function () {
     function Global() {
     }
@@ -33,6 +37,7 @@ var Global = /** @class */ (function () {
     };
     return Global;
 }());
+//Declarar variables
 var numeros = new Numeros();
 var pedido = {
     enviarMensaje: function () {
