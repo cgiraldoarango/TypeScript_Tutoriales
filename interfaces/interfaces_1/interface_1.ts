@@ -25,7 +25,10 @@ let empleado:IPersona={
 
 console.log(saludar(empleado))
 
-class Numeros implements ISerie{
+class Numeros implements ISerie, IPedido{
+    enviarMensaje(): void {
+        
+    }
     elementos: number[];
     contar(): number {
         return this.elementos[0];
@@ -38,7 +41,24 @@ class Global{
             console.log(coleccion.elementos[x])
         }
     }
+    static enviarInfo(pedido:IPedido){
+        pedido.enviarMensaje()
+    }
+    static mostrar(dato:IDatos){
+        console.log(`Nombre del cliente ${dato.nombre} edad: ${dato.edad}`)
+    }
 }
 let numeros = new Numeros();
+let pedido:IPedido={
+    enviarMensaje() {
+        console.log("este es un mensaje")
+    },
+}
+let cliente:IDatos={
+    nombre:"Paula Andrea",
+    edad:20
+}
+Global.enviarInfo(pedido);
 numeros.elementos=[1,2,3]
 Global.paraCada(numeros)
+Global.mostrar(cliente);
