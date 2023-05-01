@@ -1,3 +1,4 @@
+//Declaración de interfaces
 interface ILIbro {
     id: number;
     titulo: string;
@@ -5,6 +6,7 @@ interface ILIbro {
     coAutor?: string;
     prestamo?: (id: number) => void;
 }
+//Uso de una interface como tipo 
 const libro: ILIbro = {
     id: 12,
     autor: "Juan Gomez",
@@ -13,6 +15,7 @@ const libro: ILIbro = {
         console.log("Libro Prestado");
     }
 }
+//Uso de una interface como tipo para crear un array
 const libros: ILIbro[] = [
     { id: 1, titulo: "Un nuevo Mundo", autor: "Pedro Martinez" },
     { id: 2, titulo: "Mi familia", autor: "Anónimo" },
@@ -23,12 +26,15 @@ const libros: ILIbro[] = [
         }
     }
 ]
+//Una función retorna un tipo de Interface
 function obtenerLibro(): ILIbro {
     return {
         id: 34, titulo: "Que buena es la vida",
         autor: "marina Gomez"
     }
 }
+//Una función recibe parámetro y retorna
+//un mismo tipo de interface
 function CrearLibro(libro: ILIbro): ILIbro {
     return libro
 }
