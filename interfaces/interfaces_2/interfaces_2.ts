@@ -25,8 +25,6 @@ class TrianguloEquilatero implements IFigura {
         this.base = base;
         this.medidaLado = medidaLado
     }
-
-
 }
 let triangulo = new TrianguloEquilatero(2, 3, 5);
 mostrarInfo(triangulo)
