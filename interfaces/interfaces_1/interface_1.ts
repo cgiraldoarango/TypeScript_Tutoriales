@@ -6,3 +6,6 @@ interface IDatos{
     nombre:string;
     edad?:number;
 }
+interface IPedido{
+    enviarMensaje():void;
+}
