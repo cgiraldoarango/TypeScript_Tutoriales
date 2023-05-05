@@ -16,3 +16,22 @@ let userP: nombreUsuario = {
 imprimirNombre(userP)
 //otra forma de usar la función
 imprimirNombre({ nombre: "Paula Andrea", edad: 22 })
+/**Definiendo types con atributos opcionales */
+
+type Empleado = {
+    nombre: string,
+    edad?: number,
+    ciudad: string
+}
+function datosEmpleado(empleado: Empleado) {
+    console.log(`El empleado se llama ${empleado.nombre} 
+    y tiene ${empleado.edad}`)
+}
+//llamando a la función datosEmpleado
+datosEmpleado({ nombre: "Carmenza Gómez", edad: 55, ciudad: "Bogotá" })
+
+let nuevoEmpleado: Empleado = {
+    nombre: "Gonzalo",
+    ciudad: "Cali"
+}
+datosEmpleado(nuevoEmpleado)
