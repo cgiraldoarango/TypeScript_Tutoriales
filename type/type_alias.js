@@ -20,3 +20,13 @@ var nuevoEmpleado = {
     ciudad: "Cali"
 };
 datosEmpleado(nuevoEmpleado);
+var miVehiculo = {
+    marca: "Fiat",
+    color: "Rojo"
+};
+miVehiculo.color = "verde";
+var vehiculoFamiliar = {
+    marca: "Ford",
+    tipo: "Deportivo",
+    precio: 100000
+};

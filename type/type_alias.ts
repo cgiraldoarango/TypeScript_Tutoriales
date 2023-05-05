@@ -35,3 +35,29 @@ let nuevoEmpleado: Empleado = {
     ciudad: "Cali"
 }
 datosEmpleado(nuevoEmpleado)
+/**Types con atributos de solo lectura */
+type Vehiculo = {
+    readonly marca: string,
+    color: string;
+}
+let miVehiculo: Vehiculo = {
+    marca: "Fiat",
+    color: "Rojo",
+};
+miVehiculo.color = "verde";
+//miVehiculo.marca = "Mazda"
+//no permite modificarla porque es de solo lectura
+
+/**Uniones en type */
+type OtroVehiculo = {
+    marca: string;
+    tipo: "Familiar" | "Deportivo";
+    precio: number
+}
+let vehiculoFamiliar: OtroVehiculo = {
+    marca: "Ford",
+    tipo: "Deportivo",
+    precio: 100000,
+}
+
+
