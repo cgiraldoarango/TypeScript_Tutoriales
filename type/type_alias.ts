@@ -1,4 +1,5 @@
 //Defiendo nuestro primer type
+/**Los type permiten reutilizar código */
 type nombreUsuario = {
     nombre: string;
     edad: number

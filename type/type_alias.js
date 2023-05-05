@@ -9,4 +9,4 @@ var userP = {
 };
 imprimirNombre(userP);
 //otra forma de usar la función
-imprimirNombre({ nombre: "Paulara Andrea", edad: 22 });
+imprimirNombre({ nombre: "Paula Andrea", edad: 22 });
