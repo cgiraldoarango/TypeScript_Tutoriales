@@ -49,3 +49,11 @@ var cuadrado = {
     }
 };
 console.log("Area: " + cuadrado.area());
+var miCambio = {
+    tarifa: 1500,
+    cantidad: 100,
+    calcula: function () {
+        return miCambio.tarifa * miCambio.cantidad;
+    }
+};
+console.log(miCambio.calcula());

@@ -88,4 +88,18 @@ let cuadrado: figura = {
     }
 };
 console.log("Area: " + cuadrado.area())
+/**Otra forma para definir un método */
+type Cambio = {
+    tarifa: number;
+    cantidad: number;
+    calcula: () => number;
+}
+let miCambio: Cambio = {
+    tarifa: 1500,
+    cantidad: 100,
+    calcula: () => {
+        return miCambio.tarifa * miCambio.cantidad;
+    }
+}
+console.log(miCambio.calcula())
 
