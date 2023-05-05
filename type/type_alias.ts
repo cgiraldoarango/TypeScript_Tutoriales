@@ -103,3 +103,16 @@ let miCambio: Cambio = {
 }
 console.log(miCambio.calcula())
 
+/**Extensión de tipos */
+type Automovil = {
+    color: string;
+}
+type Deportivo = Automovil & {
+    modelo: number;
+}
+
+let miDeportivo: Deportivo = {
+    color: "Rojo",
+    modelo: 1980
+}
+

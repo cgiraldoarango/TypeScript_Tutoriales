@@ -57,3 +57,7 @@ var miCambio = {
     }
 };
 console.log(miCambio.calcula());
+var miDeportivo = {
+    color: "Rojo",
+    modelo: 1980
+};
