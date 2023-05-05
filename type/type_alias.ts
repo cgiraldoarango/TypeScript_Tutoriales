@@ -1,4 +1,4 @@
-//Defiendo nuestro primer type
+//Definiendo nuestro primer type
 /**Los type permiten reutilizar código */
 type nombreUsuario = {
     nombre: string;
@@ -59,5 +59,33 @@ let vehiculoFamiliar: OtroVehiculo = {
     tipo: "Deportivo",
     precio: 100000,
 }
+//Usando un enum en la declaración de un type
+enum Profesion {
+    Contador,
+    Ingeniero,
+    Medico
+}
+type Persona = {
+    nombre: string,
+    profesion: Profesion
+}
+let nuevaPersona: Persona = {
+    nombre: "Fernando Giraldo",
+    profesion: Profesion.Contador
+}
+/**Definir métodos en un type */
+type figura = {
+    alto: number;
+    ancho: number;
+    area(): number;
+}
 
+let cuadrado: figura = {
+    alto: 6,
+    ancho: 5,
+    area() {
+        return this.alto * this.ancho
+    }
+};
+console.log("Area: " + cuadrado.area())
 

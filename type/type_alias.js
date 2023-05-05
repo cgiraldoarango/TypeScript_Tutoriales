@@ -30,3 +30,22 @@ var vehiculoFamiliar = {
     tipo: "Deportivo",
     precio: 100000
 };
+//Usando un enum en la declaración de un type
+var Profesion;
+(function (Profesion) {
+    Profesion[Profesion["Contador"] = 0] = "Contador";
+    Profesion[Profesion["Ingeniero"] = 1] = "Ingeniero";
+    Profesion[Profesion["Medico"] = 2] = "Medico";
+})(Profesion || (Profesion = {}));
+var nuevaPersona = {
+    nombre: "Fernando Giraldo",
+    profesion: Profesion.Contador
+};
+var cuadrado = {
+    alto: 6,
+    ancho: 5,
+    area: function () {
+        return this.alto * this.ancho;
+    }
+};
+console.log("Area: " + cuadrado.area());
