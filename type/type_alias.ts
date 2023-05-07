@@ -115,4 +115,3 @@ let miDeportivo: Deportivo = {
     color: "Rojo",
     modelo: 1980
 }
-
